@@ -1,0 +1,28 @@
+#digit-1,
+#digit-2,
+#digit-3,
+#digit-4,
+#digit-5,
+#digit-6{
+    font-size:40px;
+    text-align: center;
+    border: 2px solid black;
+    border-radius: 6px;
+    caret-color: transparent;
+    width: 80px;
+    height: 80px;
+}
+.otp{
+    display: flex;
+    flex-direction: row;
+    height: 100px;
+    width: 700px;
+    justify-content: space-around;
+  }      
+  .otpsub{
+    align-self: center;
+    text-align: center;
+    width: 80px;
+    height: 80px;
+  }
+

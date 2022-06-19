@@ -1,0 +1,21 @@
+#usr,#pwd,#otp{
+    width:400px ;
+    height: 50px;
+    border: 1.8px solid black;
+}
+#hid{
+    cursor: pointer;
+    text-decoration: underline;
+}
+#hid:hover{
+    color: blue;
+}
+.main-form{
+    padding: 30px 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    border: 5px solid black;
+    border-radius: 20px;
+}

@@ -1,0 +1,49 @@
+<div class="main-form">
+<form [formGroup]="form" (ngSubmit)="submit()">
+    <div>
+        <input type="text" 
+        class="form-control"
+        id="usr"
+        placeholder="username"
+        formControlName="username"
+        name="username">
+    </div>
+    <div *ngIf="username?.touched &&username?.errors?.['required']" class="alert alert-danger">username is required</div><br>
+    <div>
+        <input type="password"
+        class="form-control"
+        id="pwd"
+        placeholder="password"
+        formControlName="password"
+        name="password">
+    </div>
+    <div *ngIf="password?.touched && password?.errors?.['required']" class="alert alert-danger">password is required</div><br>
+    <div [hidden]="isHidden">
+      <input type="text"
+      class="form-control"
+      id="otp"
+      placeholder="OTP"
+      formControlName="otp"
+      name="otp">
+  </div>
+  <div *ngIf="isQRHidden && isHidden">
+    <img [src]="this.msg" alt="">
+  </div>
+  <br>
+    <div class="form-check" [hidden]="!isHidden"> 
+      <input formControlName="register" class="form-check-input" type="checkbox" name="register" value="" id="flexCheckDefault" >
+      <label class="form-check-label" for="flexCheckDefault">
+        Register 2FA
+      </label>
+    </div>
+    <div class="form-check" [hidden]="!isHidden">
+      <input formControlName="reset" class="form-check-input" type="checkbox" value="" name="reset" id="flexCheckChecked" >
+      <label class="form-check-label" for="flexCheckChecked">
+        Reset 2FA
+      </label>
+    </div>
+     <button type="submit" class="btn btn-primary" id="btn-submit" >submit</button>
+     <br><br>
+  <span id="hid" #hid (click)="toggle(hid)">Existing User</span>
+</form>
+</div>
